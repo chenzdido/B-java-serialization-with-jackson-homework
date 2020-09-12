@@ -3,6 +3,7 @@ package com.thoughtworks.capability.gtb.vo;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,5 +18,6 @@ public class EventVo {
   private EventType type;
   @JsonFormat(shape = JsonFormat.Shape.NUMBER, pattern="s")
   private Date time;
+  @JsonUnwrapped
   private UserVo user;
 }
