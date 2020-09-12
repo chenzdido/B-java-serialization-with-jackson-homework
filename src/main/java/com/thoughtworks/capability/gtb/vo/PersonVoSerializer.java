@@ -21,7 +21,9 @@ public class PersonVoSerializer extends StdSerializer<PersonVo> {
         gen.writeStringField("id",personVo.getId());
         gen.writeNumberField("age",personVo.getAge());
         gen.writeStringField("name",personVo.getName());
-        gen.writeStringField("hobby",personVo.getHobby());
+        if(personVo.getHobby()!=null) {
+            gen.writeStringField("hobby",personVo.getHobby());
+        }
         gen.writeEndObject();
     }
 }
